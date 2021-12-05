@@ -1,0 +1,25 @@
+<ng-container *ngIf="!readonly">
+  <mat-form-field appearance="outline">
+    <mat-label *ngIf="label">{{ label }}</mat-label>
+    <input
+      [formControl]="control"
+      [readonly]="readonly"
+      matInput
+      [required]="isRequired"
+      autocomplete="off"
+      [maxlength]="maxlength"
+      [placeholder]="placeholder"
+      [attr.aria-label]="ariaLabel"
+      [attr.aria-labelledby]="ariaLabelledby"
+      [attr.aria-describedby]="ariaDescribedby"
+    />
+    <mat-hint *ngIf="hint">{{ hint }}</mat-hint>
+    <!-- <mat-error *ngIf="error">{{ renderErrorMessage(error) }}</mat-error> -->
+  </mat-form-field>
+</ng-container>
+<ng-container *ngIf="readonly">
+  <mat-form-field appearance="outline">
+    <mat-label *ngIf="label">{{ label }}</mat-label>
+    <input matInput [formControl]="readonlyControl" [readonly]="readonly" />
+  </mat-form-field>
+</ng-container>

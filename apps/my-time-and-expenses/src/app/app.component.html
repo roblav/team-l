@@ -1,0 +1,9 @@
+<form [formGroup]="form">
+  <div fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="30px grid">
+    <acc-text-input label="Amount" formControlName="amount"></acc-text-input>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start start">
+    <button mat-raised-button color="primary">Save</button>
+    <button mat-button color="primary">Cancel</button>
+  </div>
+</form>
